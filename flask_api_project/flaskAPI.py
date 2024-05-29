@@ -13,7 +13,7 @@ users_path = 'flask_api_project/users.csv'
 
 class Users(Resource):
     def get(self):
-        data = pd.read_csv(users_path)
+        data = pCd.read_csv(users_path)
         data = data.to_dict()
         return {'data': data}, 200
     
